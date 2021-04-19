@@ -43,7 +43,7 @@ public class StreamDemo {
         flatMapTest();
 
     }
-    
+
     
     public static void flatMapTest() {
         List<Teacher> teachers = new ArrayList<>();
