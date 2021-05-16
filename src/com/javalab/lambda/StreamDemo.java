@@ -44,7 +44,7 @@ public class StreamDemo {
 
     }
 
-    
+
     public static void flatMapTest() {
         List<Teacher> teachers = new ArrayList<>();
         List<String> addressList1 = Arrays.asList("address1", "address2");
@@ -53,8 +53,8 @@ public class StreamDemo {
         Teacher teacher2 = new Teacher("li", 20, addressList2);
         teachers.add(teacher1);
         teachers.add(teacher2);
-        
-        //print all the address use map
+
+        // print all the address use map
         teachers.stream().map(teacherItem -> {
             return teacherItem.getAddress();
         }).forEach(address -> {
@@ -62,9 +62,7 @@ public class StreamDemo {
         });
 
         // print all address with flatMap
-        List<String> addressList = teachers.stream().flatMap(teacherItem -> {
-            return teacherItem.getAddress().stream();
-        }).collect(Collectors.toList());
+        List<String> addressList = teachers.stream().flatMap(teacherItem -> teacherItem.getAddress().stream()).collect(Collectors.toList());
 
         System.out.println(addressList);
     }

@@ -29,9 +29,10 @@ public class OptionalDemo {
         listOpt_new.forEach((item) -> {
             System.out.println(item);
         });
+
     }
 
     public static List<String> getList() {
-        return Arrays.asList("test");
+        return Arrays.asList();
     }
 }
